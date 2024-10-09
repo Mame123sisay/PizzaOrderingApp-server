@@ -46,7 +46,7 @@ const login = async (req, res) => {
 
        // Create a JWT token
                 //const token = jwt.sign({ id: user.id, role: user.role_id }, 'as123'); // Use role_id or role_name as needed
-        res.status(200).json({restaurant_id,role_id,role_name});
+        res.status(200).json({restaurant_id,role_id,role_name,roless});
         } 
     
           
