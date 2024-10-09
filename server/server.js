@@ -38,7 +38,7 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 
-{/*}
+
 app.get('/api/render', async (req, res) => {
   try {
     // Test the connection
@@ -49,7 +49,7 @@ app.get('/api/render', async (req, res) => {
     console.error('Database connection error:', error);
     res.status(500).json({ error: 'Database connection failed!' });
   }
-});*/}
+});
 
 
 
