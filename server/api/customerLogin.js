@@ -9,7 +9,7 @@ const customerLogin = async (req, res) => {
         const { email, password } = req.body;
       
         // Query the user by email
-        const { rows } = await db.query('SELECT * FROM users WHERE email = $1', [email]);
+        const { rows } = await db.query('SELECT * FROM users WHERE email = $1 and role=$2', [email,'Customer']);
         const user = rows[0]; // Get the first user from the result
         const userId=user.id;
         const userName = user.full_name;
