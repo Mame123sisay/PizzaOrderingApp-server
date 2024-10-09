@@ -27,6 +27,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // Middleware
 app.use(cors());
 // CORS configuration
+
 const corsOptions = {
   origin: 'https://pizzaapp-client.onrender.com', // Replace with your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
@@ -37,7 +38,7 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 
-
+{/*}
 app.get('/api/render', async (req, res) => {
   try {
     // Test the connection
@@ -48,7 +49,7 @@ app.get('/api/render', async (req, res) => {
     console.error('Database connection error:', error);
     res.status(500).json({ error: 'Database connection failed!' });
   }
-});
+});*/}
 
 
 
