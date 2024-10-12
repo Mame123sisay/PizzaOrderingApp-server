@@ -15,7 +15,7 @@ const editUserStatus= require('./api/editUserStatus');
 const customerSignup = require('./api/customerSignup');
 const customerLogin = require('./api/customerLogin');
 const getRestaurants=require('./api/getRestaurants');
-const getRestaurantLogo=require('./api/getRestaurantLog');
+const getRestaurantLogo=require('./api/getRestaurantLogo');
 const PORT = process.env.PORT || 5000;
 const db=require('./db');
 
