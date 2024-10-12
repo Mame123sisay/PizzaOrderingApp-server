@@ -15,6 +15,7 @@ const editUserStatus= require('./api/editUserStatus');
 const customerSignup = require('./api/customerSignup');
 const customerLogin = require('./api/customerLogin');
 const getRestaurants=require('./api/getRestaurants');
+const getRestaurantLogo=require('./api/getRestaurantLog');
 const PORT = process.env.PORT || 5000;
 const db=require('./db');
 
@@ -61,6 +62,7 @@ app.get('/api/test', async (req, res) => {
 app.post('/api/register',upload.single('logo'), registerRestaurant);
 
 app.get('/api/restaurants/', getRestaurants);
+app.get('/api/restaurantslogo/:restaurantId',getRestaurantLogo);
 //login routes
 app.post('/api/login', login);
 app.post('/api/customer/signup', customerSignup);
