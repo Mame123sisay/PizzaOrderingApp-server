@@ -3,7 +3,7 @@ const getRestaurants=async(req,res)=>{
 
   try {
     const result = await db.query(`
-        SELECT u.location, r.name
+        SELECT u.location, r.name,r.logo_location
         FROM users u
         LEFT JOIN restaurants r ON u.restaurant_id = r.id
     `);
