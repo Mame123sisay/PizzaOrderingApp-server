@@ -29,7 +29,7 @@ const testConnection = async () => {
     const res = await pool.query('SELECT NOW()');
     console.log('Database is connected:', res.rows[0]);
   } catch (error) {
-    console.error('Database connection error:', error);
+    console.error('Database connection error:', error.message || error);
   }
 };
 
